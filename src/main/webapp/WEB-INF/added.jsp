@@ -13,6 +13,9 @@
 
 
 
+
+
+
     </jsp:attribute>
 
     <jsp:attribute name="footer">
@@ -30,13 +33,11 @@
 
         <div class="container">
 
-<%--        <img src="images/olskercupcakes.png" class="img-fluid mb-4"/>--%>
+        <img src="images/olskercupcakes.png" class="img-fluid mb-4"/>
 
         <div>
 
-            <img src="images/olskercupcakes.png"/>
-
-            <h2>Velkommen ombord</h2>
+            <h2>valg af cupcake er gemt</h2>
 
             <div/>
 
@@ -59,8 +60,7 @@
                 <br/>
 
                 <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="topping" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="topping" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Vælg topping
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -75,8 +75,7 @@
 
 
                 <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="tidspunkt"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="tidspunkt" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Vælg afhentningstidspunkt
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -85,13 +84,7 @@
 
                     </div>
                 </div>
-                <br>
 
-
-
-                <br/>
-
-                <button type="button">tilføj til kurv</button>
 
 
             </div>
