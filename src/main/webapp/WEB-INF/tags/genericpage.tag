@@ -18,6 +18,8 @@
     <meta name="theme-color" content="#7952b3">
 </head>
 <body>
+
+
     <!--
         This header is inspired by this bootstrap
         example: https://getbootstrap.com/docs/5.0/examples/pricing/
@@ -33,9 +35,9 @@
         <c:if test="${addHomeLink == null }">
             <a class="p-2 text-dark" href="<%=request.getContextPath()%>">Home</a>
         </c:if>
-        <a class="p-2 text-dark" href="#">Orders</a>
-        <a class="p-2 text-dark" href="#">Profile</a>
-        <a class="p-2 text-dark" href="#">About</a>
+        <a class="p-2 text-dark" href="#">email@email.dk</a>
+        <a class="p-2 text-dark" href="#">kurv</a>
+
     </nav>
 
     <div>

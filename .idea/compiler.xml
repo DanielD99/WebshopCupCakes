@@ -15,7 +15,11 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+<<<<<<< HEAD
+      <module name="bmi" options="-endorseddirs C:\Users\Mohammed\Desktop\CupcakeD\WebshopCupCakes\target/endorsed" />
+=======
       <module name="cupcake" options="-endorseddirs C:\Users\ANAS2\Desktop\WebshopCupCakes\target/endorsed" />
+>>>>>>> master
     </option>
   </component>
 </project>
