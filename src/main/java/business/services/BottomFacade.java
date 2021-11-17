@@ -1,5 +1,6 @@
 package business.services;
 
+import business.entities.Bottom;
 import business.persistence.BottomMapper;
 import business.persistence.Database;
 import business.exceptions.UserException;

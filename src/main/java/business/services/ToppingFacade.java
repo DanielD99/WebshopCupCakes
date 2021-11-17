@@ -1,6 +1,6 @@
 package business.services;
 
-import business.persistence.BottomMapper;
+import business.entities.Topping;
 import business.persistence.Database;
 import business.exceptions.UserException;
 import business.persistence.ToppingMapper;

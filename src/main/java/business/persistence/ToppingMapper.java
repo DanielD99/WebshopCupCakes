@@ -1,7 +1,7 @@
 package business.persistence;
 
 import business.exceptions.UserException;
-import business.services.Topping;
+import business.entities.Topping;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
