@@ -15,10 +15,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(name = "FrontController", urlPatterns = {"/fc/*"})
+
 public class FrontController extends HttpServlet {
     private final static String USER = "cupcake";
     private final static String PASSWORD = "cupcake";
     private final static String URL = "jdbc:mysql://localhost:3306/startcode?serverTimezone=CET";
+
 
     public static Database database;
 

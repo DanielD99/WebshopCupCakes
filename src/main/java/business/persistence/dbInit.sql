@@ -3,9 +3,9 @@
     If so, please substitute `startcode` with whatever your project is called.
  */
 
-CREATE DATABASE  IF NOT EXISTS `startcode`;
+CREATE DATABASE  IF NOT EXISTS `cupcake`;
 
-USE `startcode`;
+USE `cupcake`;
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
@@ -23,4 +23,3 @@ INSERT INTO `users` VALUES
 (2,'ken@world.com','jensen','customer'),
 (3,'robin@gotham.com','batman','employee');
 UNLOCK TABLES;
-

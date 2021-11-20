@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class UserMapperTest {
 
-    private final static String DATABASE = "startcode";  // Change this to your own database
+    private final static String DATABASE = "cupcake";  // Change this to your own database
     private final static String TESTDATABASE = DATABASE + "_test";
     private final static String USER = "dev";
     private final static String PASSWORD = "ax2";
@@ -79,7 +79,7 @@ public class UserMapperTest {
     public void testCreateUser01() throws UserException {
         // Can we create a new user - Notice, if login fails, this will fail
         // but so would login01, so this is OK
-        User original = new User( "king@kong.com", "uhahvorhemmeligt", "konge" );
+        User original = new User( "king@kong.com", "uhahvorhemmeligt", "konge", "123456789", "ben9", 419 );
         userMapper.createUser( original );
         User retrieved = userMapper.login( "king@kong.com", "uhahvorhemmeligt" );
         assertEquals( "konge", retrieved.getRole() );

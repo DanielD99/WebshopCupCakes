@@ -35,7 +35,9 @@
         <div>
         <div>
 
+
             <img src="images/olskercupcakes.png" class="img-fluid mb-4"/>
+
 
             <h2>Velkommen ombord</h2>
 

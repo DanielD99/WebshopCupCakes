@@ -6,20 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cupcake" />
+        <module name="cupcakeProjekt" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cupcake" target="8" />
+      <module name="cupcakeProjekt" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-<<<<<<< HEAD
-      <module name="bmi" options="-endorseddirs C:\Users\Mohammed\Desktop\CupcakeD\WebshopCupCakes\target/endorsed" />
-=======
       <module name="cupcake" options="-endorseddirs C:\Users\ANAS2\Desktop\WebshopCupCakes\target/endorsed" />
->>>>>>> master
+      <module name="cupcakeProjekt" options="-endorseddirs $PROJECT_DIR$/target/endorsed" />
     </option>
   </component>
 </project>
