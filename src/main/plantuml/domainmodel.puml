@@ -1,6 +1,6 @@
 @startuml
 'https://plantuml.com/class-diagram
-Title cupcakes domænemodel
+Title Cupcakes domænemodel
 hide circle
 hide methods
 

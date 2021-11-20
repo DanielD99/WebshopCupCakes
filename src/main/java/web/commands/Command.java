@@ -2,6 +2,7 @@ package web.commands;
 
 import business.exceptions.UserException;
 import business.persistence.Database;
+import web.Added;
 
 import java.util.HashMap;
 import javax.servlet.http.HttpServletRequest;
@@ -20,8 +21,9 @@ public abstract class Command
     private static void initCommands(Database database)
     {
         commands = new HashMap<>();
-        commands.put("index", new CommandUnprotectedPage("index"));
-        commands.put("added", new CommandUnprotectedPage("added"));
+
+        commands.put("index", new IndexCommand("index"));
+        commands.put("added", new Added("added"));
         commands.put("loginpage", new CommandUnprotectedPage("loginpage"));
         commands.put("logincommand", new LoginCommand(""));
         commands.put("logoutcommand", new LogoutCommand(""));
@@ -31,9 +33,7 @@ public abstract class Command
         commands.put("employeepage", new CommandProtectedPage("employeepage", "employee"));
     }
 
-    public static Command fromPath(
-            HttpServletRequest request,
-            Database db)
+    public static Command fromPath(HttpServletRequest request, Database db)
     {
         String action = request.getPathInfo().replaceAll("^/+", "");
         System.out.println("--> " + action);
