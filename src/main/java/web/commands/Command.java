@@ -25,6 +25,7 @@ public abstract class Command
         commands.put("index", new IndexCommand("index"));
         commands.put("added", new Added("added"));
         commands.put("loginpage", new CommandUnprotectedPage("loginpage"));
+        commands.put("orderpage", new CommandProtectedPage("orderpage", "customer"));
         commands.put("logincommand", new LoginCommand(""));
         commands.put("logoutcommand", new LogoutCommand(""));
         commands.put("registerpage", new CommandUnprotectedPage("registerpage"));

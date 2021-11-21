@@ -35,14 +35,14 @@
         <c:if test="${addHomeLink == null }">
             <a class="p-2 text-dark" href="<%=request.getContextPath()%>">Home</a>
         </c:if>
-        <a class="p-2 text-dark" href="#">email@email.dk</a>
-        <a class="p-2 text-dark" href="#">kurv</a>
+        <a class="p-2 text-dark" href="#">${sessionScope.user.email}</a>
+<%--        <a class="p-2 text-dark" href="#">kurv</a>--%>
 
     </nav>
 
     <div>
 
-        <c:if test="${sessionScope.user != null }">
+        <c:if test="${sessionScope.user != null}">
             ${sessionScope.user.email}
         </c:if>
 

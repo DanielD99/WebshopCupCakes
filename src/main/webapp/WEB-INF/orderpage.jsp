@@ -26,31 +26,119 @@
 
     <jsp:body>
 
-        <form action="FrontController" method="post">
-            <h1>BMI beregneren</h1>
+        <div class="row">
+        <div class="col-md-4"></div>
 
-            <input type="hidden" name="target" value="added"/>
+        <div class="col-md-4">
 
-            <div class="mb-3">
-                <label for="height" class="form-label">Indtast din højde i cm</label>
-                <input type="text" class="form-control" id="height" value="${sessionScope.height}" name="height" placeholder="højde">
-            </div>
+        <div class="container">
 
-            <div class="mb-3">
-                <label for="weight" class="form-label">Indtast din vægt</label>
-                <input type="text" class="form-control" id="weight" name="weight" value="${sessionScope.weight}" placeholder="vægt">
-            </div>
+        <%--        <img src="images/olskercupcakes.png" class="img-fluid mb-4"/>--%>
 
-            <div class="mb-3">
-                <label for="bmi" class="form-label">Resultat: </label>
-                <label id="bmi" class="form-label"> ${sessionScope.bmiresult} </label>
-            </div>
+        <div>
+        <div>
+
+            <img src="../images/olskercupcakes.png" class="img-fluid mb-4"/>
+
+            <h2>Velkommen ombord</h2>
 
 
-            <div class="text-center">
-                <button type="submit" class="btn btn-primary">Beregn BMI</button>
-            </div>
-        </form>
+            <form action="added" method="post">
 
+                <div style="margin-top: 3em;margin-bottom: 3em;">
+                    <h4>Øens bedste cupcakes, vælg og bestil her</h4>
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="bund"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Vælg bund
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="bund">
+                            <c:forEach items="${sessionScope.bunde}" var="bund">
+                                <a class="dropdown-item" href="#">${bund.type}. ${bund.price}kr</a>
+                            </c:forEach>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br/>
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="topping"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Vælg topping
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="topping">
+                            <c:forEach items="${sessionScope.toppings}" var="topping">
+                                <a class="dropdown-item" href="#">asdasd</a>
+                            </c:forEach>
+                        </div>
+                    </div>
+
+
+<br>
+
+        bundetest:                ${sessionScope.bunde.get(2).type}
+                    <br>
+        toppingstest:             ${sessionScope.toppings.get(2).type}
+
+
+<%--                    <div class="dropdown">--%>
+<%--                        <button class="btn btn-secondary dropdown-toggle" type="button" id="topping"--%>
+<%--                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--%>
+<%--                            Vælg topping--%>
+<%--                        </button>--%>
+<%--                        <div class="dropdown-menu" aria-labelledby="topping">--%>
+<%--                            <c:forEach items="${sessionScope.toppings}" var="topping">--%>
+<%--                                <a class="dropdown-item" href="#">${topping.type}. ${topping.price}kr</a>--%>
+<%--                            </c:forEach>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+
+
+
+                    <br>
+                    <br/>
+
+                    <a>din pris: </a>
+
+                    <br>
+                    <br/>
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="tidspunkt"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Vælg afhentningstidspunkt
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            class="dropdown">Action
+                            class="dropdown">Another action
+
+                        </div>
+                    </div>
+                    <br>
+                    <br/>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Tilføj til kurv</button>
+
+                    </div>
+
+
+                </div>
+
+                <c:if test="${sessionScope.role == 'employee' }">
+                <p style="font-size: larger">This is what you can do,
+                    since your are logged in as an employee</p>
+                <p><a href="fc/employeepage">Employee Page</a>
+                    </c:if>
+
+                    <c:if test="${sessionScope.role == 'customer' }">
+                <p style="font-size: larger">This is what you can do, since your
+                    are logged in as a customer</p>
+                <p><a href="fc/customerpage">Customer Page</a>
+                    </c:if>
+
+        </div>
     </jsp:body>
 </t:genericpage>

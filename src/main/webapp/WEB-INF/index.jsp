@@ -40,64 +40,41 @@
             <h2>Velkommen ombord</h2>
 
 
-            <form action="fc/added" method="post">
+            <form action="fc/orderpage" method="post">
 
                 <div style="margin-top: 3em;margin-bottom: 3em;">
-                    <h4>Øens bedste cupcakes, vælg og bestil her</h4>
-
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="bund"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Vælg bund
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="bund">
-                            <c:forEach items="${sessionScope.bunde}" var="bund">
-                                <a class="dropdown-item" href="#"> ${bund.type}</a>
-                            </c:forEach>
-                        </div>
-                    </div>
-
-                    <br>
-                    <br/>
-
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="topping"
-                                data-bs-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                            Vælg topping
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a>class="dropdown">Action</a>
-                            <a>class="dropdown">Another action</a>
-
-                        </div>
-                    </div>
-
-                    <br>
-                    <br/>
-
-
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="tidspunkt"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Vælg afhentningstidspunkt
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            class="dropdown">Action
-                            class="dropdown">Another action
-
-                        </div>
-                    </div>
-                    <br>
-                    <br/>
-
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-primary">Tilføj til kurv</button>
-
-                    </div>
-
+                    <h4>Øens bedste cupcakes, login for at starte med at bestille cupcakes :)</h4>
 
                 </div>
+
+        <div class="row">
+        <div class="col-md-4"></div>
+
+        <div class="col-md-4">
+
+        <div class="container">
+
+        </div>
+        </div>
+
+                <a type="button" class="btn btn-primary btn-lg"
+                   href="${pageContext.request.contextPath}/fc/loginpage">Log på</a>
+
+        <div class="col-md-4">
+
+                <br>
+                <br/>
+            </div>
+        </div>
+
+
+            Eller <a href="${pageContext.request.contextPath}/fc/registerpage">opret bruger</a>
+
+                <br>
+
+
+
+
 
                 <c:if test="${sessionScope.role == 'employee' }">
                 <p style="font-size: larger">This is what you can do,
