@@ -24,13 +24,13 @@ public class Added extends Command {
 //        request.getSession().setAttribute("weight", weight);
 //        request.getSession().setAttribute("height", height);
 //        request.getSession().setAttribute("bmiresult", bmi);
-//
+
+        String bottomId = "request.getParameter);";
+
+        request.getSession().setAttribute("bunde",bottomId);
 
 
         return "added";
     }
 
-    public Double calculateBMI(Double height, Double weight){
-        return 100d;
-    }
 }

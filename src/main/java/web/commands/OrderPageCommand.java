@@ -3,8 +3,8 @@ package web.commands;
 import business.exceptions.UserException;
 import model.Bottoms;
 import model.Toppings;
-import repositories.BottomsRepository;
-import repositories.ToppingsRepository;
+import repositories.BottomsMapper;
+import repositories.ToppingsMapper;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,10 +16,10 @@ public class OrderPageCommand extends Command{
     public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException {
         List<Bottoms> bunde = null;
         List<Toppings> toppings = null;
-        try {
 
-            toppings = ToppingsRepository.getAllToppings();
-            bunde = BottomsRepository.getAllBottoms();
+        try {
+            bunde = BottomsMapper.getAllBottoms();
+            toppings = ToppingsMapper.getAllToppings();
 
         } catch (SQLException e) {
             e.printStackTrace();

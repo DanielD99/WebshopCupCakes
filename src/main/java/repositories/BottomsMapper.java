@@ -1,16 +1,13 @@
 package repositories;
 
 import model.Bottoms;
-import web.commands.Command;
 
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BottomsRepository extends BaseRepository {
+public class BottomsMapper extends BaseMapper {
 
     public static Bottoms getBottomByType(String type) throws SQLException {
         ResultSet rs = executeQuery("SELECT id,type,price FROM bottoms where type = "+type);

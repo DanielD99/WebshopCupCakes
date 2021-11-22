@@ -2,15 +2,11 @@ package web.commands;
 
 import business.exceptions.UserException;
 import model.Bottoms;
-import repositories.BottomsRepository;
-import web.commands.Command;
+import repositories.BottomsMapper;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.List;
 
 public class IndexCommand extends Command {
@@ -27,7 +23,7 @@ public class IndexCommand extends Command {
         List<Bottoms> bunde = null;
         try {
 
-            bunde = BottomsRepository.getAllBottoms();
+            bunde = BottomsMapper.getAllBottoms();
 
         } catch (SQLException e) {
             e.printStackTrace();

@@ -1,6 +1,5 @@
 package repositories;
 
-import model.Bottoms;
 import model.Toppings;
 
 import java.sql.ResultSet;
@@ -8,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ToppingsRepository extends BaseRepository {
+public class ToppingsMapper extends BaseMapper {
 
     public static Toppings getToppingByType(String type) throws SQLException {
         ResultSet rs = executeQuery("SELECT id,type,price FROM Toppings where type = "+type);

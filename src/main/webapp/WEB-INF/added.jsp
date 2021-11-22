@@ -40,13 +40,13 @@
 
             <img src="../images/olskercupcakes.png" class="img-fluid mb-4"/>
 
-            <h2>Velkommen ombord</h2>
+            <h2>din bestilling er nu gemt i indkøbskurven</h2>
 
 
             <form action="added" method="post">
 
                 <div style="margin-top: 3em;margin-bottom: 3em;">
-                    <h4>Øens bedste cupcakes, vælg og bestil her</h4>
+                    <h4>Vælg flere cupcakes, eller gå direkte til kassen</h4>
 
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="bund"
@@ -79,18 +79,19 @@
                     <br>
                     <br/>
 
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Vælg afhentningstidspunkt</option>
+                        <option value="1">kl 10</option>
+                        <option value="2">kl 11</option>
+                        <option value="3">kl 12</option>
+                        <option value="1">kl 13</option>
+                        <option value="2">kl 14</option>
+                        <option value="3">kl 15</option>
+                        <option value="1">kl 16</option>
+                        <option value="2">kl 17</option>
+                        <option value="3">kl 18</option>
+                    </select>
 
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="tidspunkt"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Vælg afhentningstidspunkt
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            class="dropdown">Action
-                            class="dropdown">Another action
-
-                        </div>
-                    </div>
                     <br>
                     <br/>
 

@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class BaseRepository {
+public class BaseMapper {
 
     public static ResultSet executeQuery(String sql){
         try {
